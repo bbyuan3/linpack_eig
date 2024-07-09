@@ -1,7 +1,7 @@
 function [H,WR,WI] = dgeev(A)
 
 % Balance the matrix
-% �Ծ������ƽ�⴦��
+% ¶Ô¾ØÕó½øÐÐÆ½ºâ´¦Àí
 
 SFMIN1 = 1.002084180004486D-292;
 SFMAX1 = 9.979201547673599D+291; 
@@ -156,10 +156,10 @@ for ITS = 0:ITMAX
         end
         TST = abs( H( k-1, k-1 ) ) + abs( H( k, k ) );
         if( TST == 0 ) 
-            if( k-2 >= ILO )
+            if( k-2 >= 1 )
                 TST = TST + abs( H( k-1, k-2 ) );
             end
-            if( k+1 <= IHI )
+            if( k+1 <= n )
                 TST = TST + abs( H( k+1, k ) );
             end
         end        
